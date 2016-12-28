@@ -1,22 +1,10 @@
-use std::io::Read;          // tait and read_to_string
+use std::io::Read;          // read_to_string
 
+use ::feed::{RawFeed, RssFeed, AtomFeed};
 use hyper::Client;
-use rss;
-use atom_syndication;
 
 
-pub type RssFeed = rss::Channel;
-pub type AtomFeed = atom_syndication::Feed;
-
-
-#[derive(Debug)]
-pub enum Feed {
-    RssFeed(RssFeed),
-    AtomFeed(AtomFeed),
-}
-
-
-pub fn get_feed(url: &str) -> Feed {
+pub fn get_feed(url: &str) -> RawFeed {
     let client = Client::new();
     let mut reader = client.get(url).send().unwrap();
 
@@ -25,9 +13,9 @@ pub fn get_feed(url: &str) -> Feed {
 
     // TODO: need a better way to recognize RSS or Atom
     if let Ok(feed) = data.parse::<RssFeed>() {
-        return Feed::RssFeed(feed);
+        return RawFeed::RssFeed(feed);
     } else if let Ok(feed) = data.parse::<AtomFeed>() {
-        return Feed::AtomFeed(feed);
+        return RawFeed::AtomFeed(feed);
     } else {
         panic!("WTF, neither RSS or Atom :(");
     }
