@@ -1,0 +1,37 @@
+name: renfeed
+version: 0.0.1
+about: RSS aggregator
+author: Chiu-Hsiang Hsu <wdv4758h@gmail.com>
+
+settings:
+    - ColoredHelp
+
+args:
+    - engine:   # NOTE: unused yet
+        # TODO: add more template engines
+        help: choose template engine
+        long: engine
+        short: e
+        takes_value: true
+        default_value: "tera"
+        possible_values:
+            - tera
+    - feed:     # NOTE: unused yet
+        help: RSS feed setting
+        long: feed
+        short: f
+        takes_value: true
+        default_value: "feed.yml"
+    - template: # NOTE: unused yet
+        help: HTML template
+        long: template
+        short: t
+        takes_value: true
+    - config:   # NOTE: unused yet
+        help: choose config format
+        long: config
+        short: c
+        takes_value: true
+        default_value: yaml
+        possible_values:
+            - yaml

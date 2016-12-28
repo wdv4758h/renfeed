@@ -1,0 +1,12 @@
+- HackerNews:
+    name: "Hackew News"
+    feedurl: "https://news.ycombinator.com/rss"
+    homepage: "https://news.ycombinator.com/"
+  Lobsters:
+    name: "Lobsters"
+    feedurl: "https://lobste.rs/rss"
+    homepage: "https://lobste.rs/"
+  Phoronix:
+    name: "Phoronix"
+    feedurl: "http://www.phoronix.com/rss.php"
+    homepage: "http://www.phoronix.com/"
