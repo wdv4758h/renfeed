@@ -1,0 +1,8 @@
+[package]
+name = "renfeed_gen_site"
+version = "0.0.1"
+authors = ["Chiu-Hsiang Hsu <wdv4758h@gmail.com>"]
+
+[dependencies]
+renfeed_core = { path = "../renfeed_core" }
+clap = { version = "2.19.2", features = ["yaml"] }  # arguments parsing

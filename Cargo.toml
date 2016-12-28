@@ -1,12 +1,5 @@
-[package]
-name = "renfeed"
-version = "0.1.0"
-authors = ["Chiu-Hsiang Hsu <wdv4758h@gmail.com>"]
-
-[dependencies]
-clap = { version = "2.19.2", features = ["yaml"] }  # arguments parsing
-rss = "0.4.0"               # RSS format
-atom_syndication = "0.3.0"  # Atom format
-serde = "0.8.21"            # needed by serde_derive
-serde_derive = "0.8.21"     # Macros 1.1 implementation of #[derive(Serialize, Deserialize)]
-serde_yaml = "0.4.1"        # YAML feed setting, pinning the old version for clap issue #747
+[workspace]
+members = [
+    "renfeed_core/",
+    "renfeed_gen_site/",
+]

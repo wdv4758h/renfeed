@@ -1,13 +1,9 @@
 [root]
-name = "renfeed"
-version = "0.1.0"
+name = "renfeed_gen_site"
+version = "0.0.1"
 dependencies = [
- "atom_syndication 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "clap 2.19.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "rss 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 0.8.21 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde_derive 0.8.21 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde_yaml 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "renfeed_core 0.0.1",
 ]
 
 [[package]]
@@ -80,6 +76,17 @@ dependencies = [
 name = "quote"
 version = "0.3.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "renfeed_core"
+version = "0.0.1"
+dependencies = [
+ "atom_syndication 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rss 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 0.8.21 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde_derive 0.8.21 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde_yaml 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)",
+]
 
 [[package]]
 name = "rss"
