@@ -1,6 +1,7 @@
 use std::io::Read;          // read_to_string
+use std::collections::HashMap;
 
-use ::feed::{RawFeed, RssFeed, AtomFeed};
+use ::feed::{FeedSettings, RawFeed, RssFeed, AtomFeed};
 use hyper::Client;
 
 
@@ -19,4 +20,12 @@ pub fn get_feed(url: &str) -> RawFeed {
     } else {
         panic!("WTF, neither RSS or Atom :(");
     }
+}
+
+pub fn get_feeds(feed_settings: &FeedSettings) -> HashMap<String, RawFeed> {
+    let mut data = HashMap::<String, RawFeed>::new();
+    for (id, feed) in feed_settings.feeds.iter() {
+        data.insert(id.clone(), get_feed(&feed.feedurl));
+    }
+    data
 }

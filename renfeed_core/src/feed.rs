@@ -8,18 +8,18 @@ use atom_syndication;
 // Config
 ////////////////////////////////////////
 
-#[derive(Debug, Default, Serialize, Deserialize)]
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
 pub struct FeedSetting {
-    name: String,
-    feedurl: String,
-    homepage: String,
-    categories: Option<Vec<String>>,
-    tags: Option<Vec<String>>,
+    pub name: String,
+    pub feedurl: String,
+    pub homepage: String,
+    pub categories: Option<Vec<String>>,
+    pub tags: Option<Vec<String>>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
 pub struct FeedSettings {
-    feeds: HashMap<String, FeedSetting>,    // id, setting
+    pub feeds: HashMap<String, FeedSetting>,    // id, setting
 }
 
 ////////////////////////////////////////

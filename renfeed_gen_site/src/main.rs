@@ -25,9 +25,6 @@ fn main() {
     let feeds = renfeed_core::parse_yaml_file("share/feed.yml");
     println!("{:#?}", feeds);
 
-    let feed = renfeed_core::get_feed("https://lobste.rs/rss");
-    println!("{:#?}", feed);
-
-    let feed = renfeed_core::get_feed("http://this-week-in-rust.org/atom.xml");
-    println!("{:#?}", feed);
+    let feeds = renfeed_core::get_feeds(&feeds);
+    println!("{:#?}", feeds);
 }
