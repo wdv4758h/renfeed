@@ -14,3 +14,4 @@ pub mod fetch;
 
 pub use feed::*;
 pub use config::*;
+pub use fetch::*;
