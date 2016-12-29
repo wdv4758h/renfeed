@@ -1,0 +1,20 @@
+- HackerNews:
+    name: "Hackew News"
+    feedurl: "https://news.ycombinator.com/rss"
+    homepage: "https://news.ycombinator.com/"
+  Lobsters:
+    name: "Lobsters"
+    feedurl: "https://lobste.rs/rss"
+    homepage: "https://lobste.rs/"
+  Phoronix:
+    name: "Phoronix"
+    feedurl: "http://www.phoronix.com/rss.php"
+    homepage: "http://www.phoronix.com/"
+  ThisWeekInRust:
+    name: "This Week in Rust"
+    feedurl: "http://this-week-in-rust.org/atom.xml"
+    homepage: "https://this-week-in-rust.org/"
+  LLVMWeekly:
+    name: "LLVM Weekly"
+    feedurl: "http://llvmweekly.org/rss.xml"
+    homepage: "http://llvmweekly.org/"

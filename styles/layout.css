@@ -1,0 +1,91 @@
+/* Some Hacky CSS */
+
+h1 { margin: 0; }
+
+.fl { float: left; }
+
+.fr { float: right; }
+
+body {
+    margin: 0;
+    background-color: rgb(242, 241, 237);
+}
+
+header {
+    background-color: rgb(250, 249, 245);
+    border-bottom: 2px solid #e7e6e4;
+    color: rgb(148, 53, 38);
+    font-family: "Georgia,Times,serif";
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.tc {
+    text-align: center;
+}
+
+article {
+    background-color: rgb(250, 249, 245);
+    border-bottom: 2px solid #e7e6e4;
+    border-left: 1px solid #e7e6e4;
+    border-right: 1px solid #e7e6e4;
+    color: rgb(106, 99, 89);
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+}
+
+hr {
+    color: rgb(217, 214, 208);
+}
+
+.source {
+    text-align: right;
+    font-style: italic;
+    font-size: 95%;
+}
+
+a {
+    color: rgb(120, 112, 101);
+}
+
+.more {
+    text-align: right;
+    padding-top: 20px;
+}
+
+p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+footer {
+    color: rgb(106, 99, 89);
+    font-size: 120%;
+    border-top: 2px solid #e7e6e4;
+    margin-top: 20px;
+}
+
+#feedsource {
+    color: rgb(106, 99, 89);
+    border-top: 2px solid #e7e6e4;
+}
+
+#feedsource > ul {
+    -moz-column-count: 4;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 20px;
+    column-count: 4;
+    column-gap: 20px;
+}

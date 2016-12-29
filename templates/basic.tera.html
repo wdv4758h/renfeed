@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RenFeed</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/layout.css" type="text/css">
+  </head>
+  <body>
+    <header>
+      <h1>RenFeed</h1>
+    </header>
+    <div class="wrapper">
+      {% for feed in feeds %}
+      {% for content in feed.content %}
+      <article>
+        <h2 class="tc">{{ content.title }}</h2>
+        <h3 class="source">{{ feed.name }} - {{ content.date }}</h3>
+        <hr/>
+        <p>{{ content.description }}</p>
+        <footer class="more"><a href="{{ content.link }}">Read More &raquo;</a></footer>
+      </article>
+      {% endfor %}
+      {% endfor %}
+    </div>
+    <div id="feedsource" class="wrapper">
+      <h2>Feeds</h2>
+      <ul>
+        {% for feed in feeds %}
+        <li><a href="{{ feed.homepage }}">{{ feed.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <footer id="footer">
+        <p class="fr">
+            <a href="https://github.com/wdv4758h/renfeed">RenFeed</a>
+        </p>
+    </footer>
+  </body>
+</html>
