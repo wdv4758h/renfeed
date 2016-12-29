@@ -2,6 +2,11 @@
 name = "renfeed_core"
 version = "0.0.1"
 authors = ["Chiu-Hsiang Hsu <wdv4758h@gmail.com>"]
+license = "Apache-2.0"
+description = "renfeed's core functionality to handle RSS/Atom"
+repository = "https://github.com/wdv4758h/renfeed/"
+keywords = ["RSS", "Atom"]
+readme = "../README.rst"
 
 [dependencies]
 rss = "0.4.0"               # RSS format

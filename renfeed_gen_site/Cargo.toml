@@ -2,6 +2,11 @@
 name = "renfeed_gen_site"
 version = "0.0.1"
 authors = ["Chiu-Hsiang Hsu <wdv4758h@gmail.com>"]
+license = "Apache-2.0"
+description = "renfeed's CLI wrapper"
+repository = "https://github.com/wdv4758h/renfeed/"
+keywords = ["RSS", "Atom"]
+readme = "../README.rst"
 
 [dependencies]
 renfeed_core = { path = "../renfeed_core" }
