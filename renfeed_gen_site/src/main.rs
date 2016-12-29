@@ -4,6 +4,9 @@ extern crate renfeed_core;
 extern crate clap;              // CLI arguments
 
 
+use std::fs::File;
+use std::io::Write;
+
 use clap::App;
 
 
@@ -22,9 +25,10 @@ fn main() {
     // Parse Feed Settings
     ////////////////////
 
-    let feeds = renfeed_core::parse_yaml_file("share/feed.yml");
-    println!("{:#?}", feeds);
-
-    let feeds = renfeed_core::get_feeds(&feeds);
-    println!("{:#?}", feeds);
+    let settings = renfeed_core::parse_yaml_file("share/feeds/basic.yml");
+    let feeds = renfeed_core::get_feeds(&settings);
+    let template = renfeed_core::load_template("share/templates/**/*");
+    let html = renfeed_core::render(&template, "basic.tera.html", &feeds);
+    let mut f = File::create("share/index.html").unwrap();
+    let _ = f.write_all(html.as_bytes());
 }

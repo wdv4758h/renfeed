@@ -10,3 +10,4 @@ serde = "0.8.21"            # needed by serde_derive
 serde_derive = "0.8.21"     # Macros 1.1 implementation of #[derive(Serialize, Deserialize)]
 serde_yaml = "0.4.1"        # YAML feed setting, pinning the old version for clap issue #747
 hyper = "0.9.4"             # fetching RSS feed
+tera = "0.6.1"              # HTML template

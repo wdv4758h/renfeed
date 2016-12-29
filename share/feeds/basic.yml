@@ -14,3 +14,7 @@
     name: "This Week in Rust"
     feedurl: "http://this-week-in-rust.org/atom.xml"
     homepage: "https://this-week-in-rust.org/"
+  LLVMWeekly:
+    name: "LLVM Weekly"
+    feedurl: "http://llvmweekly.org/rss.xml"
+    homepage: "http://llvmweekly.org/"

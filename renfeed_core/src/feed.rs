@@ -39,7 +39,7 @@ pub enum RawFeed {
 // Internal Handled Feed
 ////////////////////////////////////////
 
-#[derive(Debug, Clone, Default)]
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
 pub struct FeedContent {
     pub id: String,
     pub title: String,
@@ -49,7 +49,7 @@ pub struct FeedContent {
     pub human_date: String,
 }
 
-#[derive(Debug, Clone, Default)]
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
 pub struct Feed {
     pub name: String,
     pub feedurl: String,
