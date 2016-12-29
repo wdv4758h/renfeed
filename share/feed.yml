@@ -10,3 +10,7 @@
     name: "Phoronix"
     feedurl: "http://www.phoronix.com/rss.php"
     homepage: "http://www.phoronix.com/"
+  ThisWeekInRust:
+    name: "This Week in Rust"
+    feedurl: "http://this-week-in-rust.org/atom.xml"
+    homepage: "https://this-week-in-rust.org/"
